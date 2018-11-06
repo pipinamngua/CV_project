@@ -15,6 +15,8 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex omnis atque illo odio labore, debitis, qui quo? Odio similique illum eligendi distinctio repellendus quod inventore, aliquam modi, recusandae labore dignissimos aperiam expedita unde ea rem iusto magni ipsum nisi neque!</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam eum quod et provident consectetur dolores, itaque quae <a href="#">dignissimos voluptatem</a>, accusamus, aut omnis ipsa quidem error magni facilis excepturi explicabo repudiandae. Velit beatae, facere magni. Odio obcaecati possimus reiciendis incidunt quo expedita quis ipsum quibusdam omnis, numquam beatae minima iure tenetur impedit totam ea esse deleniti eum? Minima maiores expedita, accusamus.</p>
       </section>
+      <button class="primary">Back</button>
+      <button class="danger">Error</button>
     </article>
 
     <aside id="sidebar">
@@ -43,7 +45,7 @@ export default {
   @import '~assets/sass/main.scss';
   #main {
       width: $content-width;
-      height: auto;
+      height: 500px;
       @include large-screens {
           width: auto;
           max-width: $content-width;
@@ -52,10 +54,27 @@ export default {
       margin-right: auto;
 
       #content {
+        float: left;
+        width: 80%;
       }
 
       #sidebar {
+        width: 20%;
+        float: left;
       }
+
+      .primary {
+        background-color: blue;
+        color: white;
+      }
+
+      .danger {
+        @extend .primary;
+        color: red;
+        font-size: 15px;
+      }
+
+
   }
   .container {
       min-height: 100vh;
